@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style3.css">
+
+    
+</head>
+
+<body>
+
+    
+
+
+    <div class="form">
+        <form>
+            <div class="formHeader">
+                <h1>Add an advertisement</h1>
+            </div>
+            <div class="formBody">
+                <div class="formElement">
+                    <select required name="state" id="state">
+                        <option value="" selected disabled hidden>Choose State</option>
+                        <option value="Adam">Adam</option>
+                        <option value="Al-Hamra">Al-Hamra</option>
+                        <option value="Bahla">Bahla</option>
+                        <option value="Bidbid">Bidbid</option>
+                        <option value="Izki">Izki</option>
+                        <option value="Manah">Manah</option>
+                        <option value="Nizwa">Nizwa</option>
+                        <option value="Samail">Samail</option>
+                        <option value="Al-Buryami">Al-Buryami</option>
+                        <option value="As-Sunaynah">As-Sunaynah</option>
+                        <option value="Mahdah">Mahdah</option>
+                        <option value="Aq-Duqm">Aq-Duqm</option>
+                        <option value="Al-Jazer">Al-Jazer</option>
+                        <option value="Hayma">Hayma</option>
+                        <option value="Mahut">Mahut</option>
+                        <option value="Dank">Dank</option>
+                        <option value="Ibri">Ibri</option>
+                        <option value="Yanqul">Yanqul</option>
+                        <option value="Al-Awabi">Al-Awabi</option>
+                        <option value="Al-Masna'ah">Al-Masna'ah</option>
+                        <option value="Ar-Rustaq">Ar-Rustaq</option>
+                        <option value="Barka">Barka</option>
+                        <option value="Nakhal">Nakhal</option>
+                        <option value="Wadi al-Mawil">Wadi al-Mawil</option>
+                        <option value="Al-Kamil & Al-Wafi">Al-Kamil & Al-Wafi</option>
+                        <option value="Ja'alan Bani Bu Ali">Ja'alan Bani Bu Ali</option>
+                        <option value="Ja'alan Bani Bu Hassan">Ja'alan Bani Bu Hassan</option>
+                        <option value="Masirah">Masirah</option>
+                        <option value="Sur">Sur</option>
+                        <option value="Al-Amrat">Al-Amrat</option>
+                        <option value="As-Sib">As-Sib</option>
+                        <option value="Bawshar">Bawshar</option>
+                        <option value="Masqat">Masqat</option>
+                        <option value="Al-Mazyunah">Al-Mazyunah</option>
+                        <option value="Dalkut">Dalkut</option>
+                        <option value="Mirbat">Mirbat</option>
+                        <option value="Muqshin">Muqshin</option>
+                        <option value="Rakhyut">Rakhyut</option>
+                        <option value="Sadah">Sadah</option>
+                        <option value="Salalah">Salalah</option>
+                        <option value="Shalim & Juzur al-Hallaniyyat">Shalim & Juzur al-Hallaniyyat</option>
+                        <option value="Taqah">Taqah</option>
+                        <option value="Tumrayt">Tumrayt</option>
+                        <option value="Al-Khaburah">Al-Khaburah</option>
+                        <option value="As-Suwaiq">As-Suwaiq</option>
+                        <option value="Liwa">Liwa</option>
+                        <option value="Saham">Saham</option>
+                        <option value="Shinas">Shinas</option>
+                        <option value="Suhur">Suhur</option>
+                        <option value="Al-Mudaibi">Al-Mudaibi</option>
+                        <option value="Al-Qalib">Al-Qalib</option>
+                        <option value="Bidiyah">Bidiyah</option>
+                        <option value="Dima & At-Tayin">Dima & At-Tayin</option>
+                        <option value="Ibra">Ibra</option>
+                        <option value="Wadi Bani Khalid">Wadi Bani Khalid</option>
+                        <option value="Bukha">Bukha</option>
+                        <option value="Diba al-Bay'ah">Diba al-Bay'ah</option>
+                        <option value="Khasab">Khasab</option>
+                        <option value="Madha">Madha</option>
+                    </select>
+                </div>
+                <div class="formElement">
+                    <select required name="rooms" id="rooms">
+                        <option value="" selected disabled hidden>Choose Rooms</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5+</option>
+                    </select>
+                </div>
+                <div class="formElement">
+                    <select required name="price" id="price">
+                        <option value="" selected disabled hidden>Choose Price</option>
+                        <option value="500">500</option>
+                        <option value="50000">50000</option>
+                        <option value="100000">100000</option>
+                        <option value="150000">150000+</option>
+                    </select>
+                </div>
+                <div class="formElement">
+                    <label>Description</label>
+                    <textarea required rows="3"></textarea>
+                </div>
+                <div class="formElement">
+                    <label id="imageLabel" for="uploadImg">
+                       <span id="filename"> Upload Image </span>
+                    </label>
+                    <input type="file" hidden name="picture" id="uploadImg" onchange="changeFileName()">
+                </div>
+            </div>
+            <div class="formFooter">
+                <input type="submit" value="Continue" />
+            </div>
+        </form>
+    </div>
+    <!-- <script>
+        function changeFileName()
+        {
+            let filename = document.querySelector('#uploadImg').value;
+            document.querySelector('#filename').innerText = filename.substr(12);
+
+        }
+    </script> -->
+    
+
+</body>
+
+</html>

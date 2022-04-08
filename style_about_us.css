@@ -1,0 +1,184 @@
+
+
+/**Navbar**/ 
+.menu{
+    flex:1;
+    text-align:right;
+    font-size: 1px;
+}
+
+.navbar{
+    background-color: rgb(245, 245, 245);
+    align-items: center;
+    display: flex;
+    padding: 0 20px ;
+}
+
+.logo{
+    height: 110px;
+    width: 150px;
+    padding-top: 1px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courgette', cursive;
+}
+
+
+
+li{
+    display: inline-block;
+    padding: 10px;
+    font-size: small;
+    color: rgb(250, 192, 0);
+    font-family: monospace;
+}
+
+
+.background{
+    width: 1820px;
+    height: 300px;
+    padding: 300px;
+    background-image: url(img/cover.jpg);
+    background-size: cover;
+     color: yellow ;
+    
+}
+
+/**Navbar**/ 
+
+
+
+
+/**AboutUs**/
+.contant{
+
+    padding: 250px;
+    background: linear-gradient(to right, #f0eeea 0%, #1e00ff 100%);
+    text-align: center;
+
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 30px;
+    text-align: center;
+    padding: px;
+}
+
+ .cell1{
+    display:grid;
+    position: relative;
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+    border: 1px solid rgb(252, 169, 16);
+    background-color:rgb(252, 169, 16);
+    padding-top: 10px;
+    border-radius: 10px 10px 10px 10px;
+    margin: 10px;
+}
+
+.cell2{
+    display:grid;
+    position: relative;
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+    border: 1px solid rgb(252, 169, 16);
+    background-color:rgb(252, 169, 16);
+    padding-top: 10px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.Cells_team{
+    flex-basis: 25%;
+    margin: 0 10px;
+    border-radius: 10px ;
+    overflow: hidden;
+    background-color: burlywood;
+    color:rgb(0, 25, 248);
+}
+.Cells_team > h2{
+    
+    font-size: 1.5em;
+    padding: 15px;
+}
+.Cells_team img{
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+.team{
+    padding: 100px 30px 60px 30px;
+}
+.team > .row > .Cells_team{
+    padding: 25px 0;
+    border-radius: 10px 10px 10px 10px;
+    background-color: rgb(255, 196, 0);
+    
+    transition: transform 0.5s;
+    height: 200px;
+    width: 300px;
+}
+.team > .row > .Cells_team:hover{
+    transform: translateY(-50px);
+}
+.team  img {
+    height: 100px;
+    width: 100px;
+    margin-top: 5px;
+    border-radius: 50%;
+}
+
+/**AboutUs**/
+
+
+/**footer**/
+
+
+footer{
+    padding: 40px 0;
+    background-color: rgb(255, 251, 32);
+}
+.footer-container{
+margin: auto;
+padding: 0 20px;
+text-align: center;
+justify-content: center;
+}
+
+.social{
+    flex-basis: 50%;
+    margin: 0 20px;
+}
+.social img{
+    width: 50%;
+}
+.social p{
+    text-align: left;
+    padding-top: 100px;
+}
+
+footer .social{
+    text-align: center;
+    align-items: center;
+}
+footer  li a{
+    align-items: center;
+    font-size: 5px;
+
+    color: orange;
+}
+/**footer**/
+
+.footer {
+    align-items: center;
+    font-size: 25px;
+}
