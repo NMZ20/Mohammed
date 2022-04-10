@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+    
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="indext.html">Catch Home</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="indext.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="signin.html">Signin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="singup.html">Signup</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="adanad.html">Add an add</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="search.html">Search</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About_Us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contant.html">Contact Us</a>
+          </li>
+         </ul>
+         <div class="d-flex justify-content-end">
+             <i class="fas fa-award"></i>
+         </div>
+        </div>
+      </nav>
+
+      <form name="myForm" onsubmit="return validate()" method="post" action="indext.html">
+        <div class="mb-3">
+          <label for="nameInput" class="form-label">Name</label>
+          <input name="fname" type="text" class="form-control" id="nameInput" >
+          <div id="name-warning" class="form-text text-danger"></div>
+        </div>
+        <div class="mb-3">
+          <label for="emailinput" class="form-label">Email</label>
+          <input name="femail" class="form-control" id="emailinput" >
+          <div id="email-warning" class="form-text text-danger"></div>
+        </div>
+        <div class="mb-3">
+            <label for="messageInput" class="form-label">Message</label>
+            <textarea name="fmessage" class="form-control" id="messageInput" name="message1" rows="4" cols="50"></textarea>
+            <div id="message-warning" class="form-text text-danger"></div>
+          </div>
+
+        <div class="mb-3 form-check">
+          <label class="form-check-label" for="exampleCheck1">Agree to terms and conditions</label>
+          <input name="fcheck" type="checkbox" class="ml-2 form-check-input" id="Check1">
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit" disabled>Submit</button>
+      </form>
+</body>
+<script>
+    const disableCheckBox = document.getElementById("Check1");
+      // Retrieve reference to button
+    const submitButton = document.getElementById("submit");
+
+      disableCheckBox.addEventListener("change", (e) => {
+          if (e.target.checked) {
+                // Disable button when checkbox is selected
+              submitButton.disabled = false;
+          } else {
+              // Enable button when checkbox is deselected
+              submitButton.disabled = true;
+          }
+      });
+
+      function validate() {
+        const name = document.forms["myForm"]["fname"].value;
+        const email = document.forms["myForm"]["femail"].value;
+        const message = document.forms["myForm"]["fmessage"].value;
+
+
+        if (name == "") {
+            document.getElementById("name-warning").innerHTML = "name must be filled out"
+            return false;
+        }
+        
+        let emailValidation = email.includes("@");
+        if (email == "") {
+            document.getElementById("email-warning").innerHTML = "email must be filled out"
+            return false;
+        }else if (!emailValidation) {
+            document.getElementById("email-warning").innerHTML = "email is not valid, please include @"
+            return false;
+        }
+
+        if (message == "") {
+            document.getElementById("message-warning").innerHTML = "message must be filled out"
+            return false;
+        }
+      }
+</script>
+
+</html>
