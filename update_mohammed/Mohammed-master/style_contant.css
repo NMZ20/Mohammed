@@ -1,0 +1,117 @@
+/**Navbar**/
+.menu{
+    flex:1;
+    text-align:right;
+    font-size: 1px;
+}
+
+.navbar{
+    background-color: rgb(245, 245, 245);
+    align-items: center;
+    display: flex;
+    padding: 0 20px ;
+}
+
+.logo{
+    height: 110px;
+    width: 150px;
+    padding-top: 1px;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courgette', cursive;
+}
+
+
+/**Navbar**/
+
+
+
+/**input**/
+li a{
+    display: block;
+    text-decoration: none;
+    
+}
+li{
+    display: inline-block;
+    padding: 10px;
+    font-size: small;
+    color: rgb(250, 192, 0);
+    font-family: monospace;
+}
+
+.contant1{
+
+    padding: 100px;
+
+    background: linear-gradient(to right, #f0eeea 0%, #1e00ff 100%);
+}
+
+.contact{
+    align-items: center;
+    text-align: center;
+}
+
+.contact>h1{
+
+    padding-bottom: 50px;
+}
+
+.cellcontant{
+    border: thin;
+    color: blanchedalmond;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.cell1{
+    
+    display:grid;
+    position: relative;
+    height: 300px;
+    width: 500px;
+    overflow: hidden;
+    border: 1px solid rgb(252, 169, 16);
+    background-color:rgb(252, 169, 16);
+    padding-top: 10px;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+
+.social{
+    padding-top:50px ;
+}
+
+input[type=text],input[type=email]{
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: none;
+    background: linear-gradient(to right, #f0eeea 0%, #1e00ff 100%);
+    color: white;
+    border-radius: 10px 10px 10px 10px;
+}
+input[type=submit]{
+    color: white;
+    background: linear-gradient(to right, #f0eeea 0%, #1e00ff 100%);
+    width: 50px;
+    height: 30px;
+    border: none;
+}
+input[type=submit]:hover{
+    background-color: white;
+    color: rgb(234, 255, 41);
+}
+
+/**input**/

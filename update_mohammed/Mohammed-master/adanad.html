@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+
+</head>
+
+<body>
+
+
+
+    <div class="form">
+        <form name="adsForm" id="adsForm" onsubmit="return calculatePrice()" method="post">
+            <div class="formHeader">
+                <h1>Add an advertisement</h1>
+            </div>
+            <div class="formBody">
+                <div class="formElement">
+                    <select required name="state" id="state">
+                        <option value="" selected disabled hidden>Choose State</option>
+                        <option value="Adam">Adam</option>
+                        <option value="Al-Hamra">Al-Hamra</option>
+                        <option value="Bahla">Bahla</option>
+                        <option value="Bidbid">Bidbid</option>
+                        <option value="Izki">Izki</option>
+                        <option value="Manah">Manah</option>
+                        <option value="Nizwa">Nizwa</option>
+                        <option value="Samail">Samail</option>
+                        <option value="Al-Buryami">Al-Buryami</option>
+                        <option value="As-Sunaynah">As-Sunaynah</option>
+                        <option value="Mahdah">Mahdah</option>
+                        <option value="Aq-Duqm">Aq-Duqm</option>
+                        <option value="Al-Jazer">Al-Jazer</option>
+                        <option value="Hayma">Hayma</option>
+                        <option value="Mahut">Mahut</option>
+                        <option value="Dank">Dank</option>
+                        <option value="Ibri">Ibri</option>
+                        <option value="Yanqul">Yanqul</option>
+                        <option value="Al-Awabi">Al-Awabi</option>
+                        <option value="Al-Masna'ah">Al-Masna'ah</option>
+                        <option value="Ar-Rustaq">Ar-Rustaq</option>
+                        <option value="Barka">Barka</option>
+                        <option value="Nakhal">Nakhal</option>
+                        <option value="Wadi al-Mawil">Wadi al-Mawil</option>
+                        <option value="Al-Kamil & Al-Wafi">Al-Kamil & Al-Wafi</option>
+                        <option value="Ja'alan Bani Bu Ali">Ja'alan Bani Bu Ali</option>
+                        <option value="Ja'alan Bani Bu Hassan">Ja'alan Bani Bu Hassan</option>
+                        <option value="Masirah">Masirah</option>
+                        <option value="Sur">Sur</option>
+                        <option value="Al-Amrat">Al-Amrat</option>
+                        <option value="As-Sib">As-Sib</option>
+                        <option value="Bawshar">Bawshar</option>
+                        <option value="Masqat">Masqat</option>
+                        <option value="Al-Mazyunah">Al-Mazyunah</option>
+                        <option value="Dalkut">Dalkut</option>
+                        <option value="Mirbat">Mirbat</option>
+                        <option value="Muqshin">Muqshin</option>
+                        <option value="Rakhyut">Rakhyut</option>
+                        <option value="Sadah">Sadah</option>
+                        <option value="Salalah">Salalah</option>
+                        <option value="Shalim & Juzur al-Hallaniyyat">Shalim & Juzur al-Hallaniyyat</option>
+                        <option value="Taqah">Taqah</option>
+                        <option value="Tumrayt">Tumrayt</option>
+                        <option value="Al-Khaburah">Al-Khaburah</option>
+                        <option value="As-Suwaiq">As-Suwaiq</option>
+                        <option value="Liwa">Liwa</option>
+                        <option value="Saham">Saham</option>
+                        <option value="Shinas">Shinas</option>
+                        <option value="Suhur">Suhur</option>
+                        <option value="Al-Mudaibi">Al-Mudaibi</option>
+                        <option value="Al-Qalib">Al-Qalib</option>
+                        <option value="Bidiyah">Bidiyah</option>
+                        <option value="Dima & At-Tayin">Dima & At-Tayin</option>
+                        <option value="Ibra">Ibra</option>
+                        <option value="Wadi Bani Khalid">Wadi Bani Khalid</option>
+                        <option value="Bukha">Bukha</option>
+                        <option value="Diba al-Bay'ah">Diba al-Bay'ah</option>
+                        <option value="Khasab">Khasab</option>
+                        <option value="Madha">Madha</option>
+                    </select>
+                </div>
+                <div class="formElement">
+                    <select required name="frooms" id="rooms">
+                        <option value="" selected disabled hidden>Choose Rooms</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+                <div class="formElement">
+                    <input required name="fprice" placeholder="Price">
+                    <p class="text-danger mt-1" id="priceWarning"></p>
+                </div>
+                <div class="formElement">
+                    <label>Description</label>
+                    <textarea required rows="3"></textarea>
+                </div>
+                <div class="formElement">
+                    <label id="imageLabel" for="uploadImg">
+                        <span id="filename"> Upload Image </span>
+                    </label>
+                    <input type="file" hidden name="picture" id="uploadImg">
+                </div>
+            </div>
+            <div class="formFooter">
+                <input type="submit" value="Show Price" />
+            </div>
+            <p class="text-danger mt-2" id="finalPrice"></p>
+        </form>
+    </div>
+    <script>
+        function calculatePrice() {
+
+            const rooms = document.forms["adsForm"]["frooms"].value;
+            const price = document.forms["adsForm"]["fprice"].value;
+            if (price <= 0) {
+                document.getElementById("priceWarning").innerHTML = " price must be more than 0";
+                return false;
+            }
+
+            if (price <= 1000) {
+                document.getElementById("finalPrice").innerHTML = "Your ad price is 5 Omani Rials";
+            } else if (price <= 10000) {
+                document.getElementById("finalPrice").innerHTML = "Your ad price is 15 Omani Rials";
+            } else {
+                document.getElementById("finalPrice").innerHTML = "Your ad price is 30 Omani Rials";
+            }
+            return false;
+        }
+    </script>
+
+
+</body>
+
+</html>
