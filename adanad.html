@@ -54,7 +54,7 @@
 
 
     <div class="form">
-        <form>
+        <form name="adsForm" id="adsForm" onsubmit="return calculatePrice()" method="post">
             <div class="formHeader">
                 <h1>Add an advertisement</h1>
             </div>
@@ -124,23 +124,23 @@
                     </select>
                 </div>
                 <div class="formElement">
-                    <select required name="rooms" id="rooms">
+                    <select required name="frooms" id="rooms">
                         <option value="" selected disabled hidden>Choose Rooms</option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                         <option value="4">4</option>
-                        <option value="5">5+</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
                     </select>
                 </div>
                 <div class="formElement">
-                    <select required name="price" id="price">
-                        <option value="" selected disabled hidden>Choose Price</option>
-                        <option value="500">500</option>
-                        <option value="50000">50000</option>
-                        <option value="100000">100000</option>
-                        <option value="150000">150000+</option>
-                    </select>
+                    <input required name="fprice" placeholder="Price">
+                    <p class="text-danger mt-1" id="priceWarning"></p>
                 </div>
                 <div class="formElement">
                     <label>Description</label>
@@ -150,22 +150,35 @@
                     <label id="imageLabel" for="uploadImg">
                        <span id="filename"> Upload Image </span>
                     </label>
-                    <input type="file" hidden name="picture" id="uploadImg" onchange="changeFileName()">
+                    <input type="file" hidden name="picture" id="uploadImg">
                 </div>
             </div>
             <div class="formFooter">
-                <input type="submit" value="Continue" />
+                <input type="submit" value="Show Price" />
             </div>
+            <p class="text-danger mt-2" id="finalPrice"></p>
         </form>
     </div>
-    <!-- <script>
-        function changeFileName()
-        {
-            let filename = document.querySelector('#uploadImg').value;
-            document.querySelector('#filename').innerText = filename.substr(12);
+    <script>
+        function calculatePrice() {
 
+            const rooms = document.forms["adsForm"]["frooms"].value;
+            const price = document.forms["adsForm"]["fprice"].value;
+            if (price <= 0) {
+                document.getElementById("priceWarning").innerHTML = " price must be more than 0";
+                return false;
+            }
+
+            if (price <= 1000) {
+                document.getElementById("finalPrice").innerHTML = "Your ad price is 5 Omani Rials";
+            }else if (price <= 10000) {
+                document.getElementById("finalPrice").innerHTML = "Your ad price is 15 Omani Rials";
+            }else {
+                document.getElementById("finalPrice").innerHTML = "Your ad price is 30 Omani Rials";
+            }
+            return false;
         }
-    </script> -->
+    </script>
     
 
 </body>
